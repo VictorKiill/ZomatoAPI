@@ -5,3 +5,7 @@ def getfoodplaces(apiKey, lat, lon, *args):
     headers = {"Accept": "application/json", "user_key": apiKey}
     lista = req.get(url, headers=headers)
     return lista.json()
+
+def locateByIP():
+    data = req.get('http://ipinfo.io/json')
+    return data.json()
