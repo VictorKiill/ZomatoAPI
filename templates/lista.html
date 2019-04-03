@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Lugares para Comer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<header>
+    <h1>Lista de Lugares para Comer</h1>
+</header>
+<body>
+    {% for item in lista %}
+        <table>
+            <tr>
+                <th> Nome </th>
+                <td> {{ item['restaurant']['name'] }} </td>
+                <th> Endereço </th>
+                <td> {{ item['restaurant']['location']['address'] }} </td>
+                <th> Tipo de Cozinhas </th>
+                <td> {{ item['restaurant']['cuisines'] }} </td>
+                <th> Avaliação </th>
+                <td> {{ item['restaurant']['user_rating']['rating_text'] }} </td>
+            </tr>
+        </table>
+    {% endfor %}
+</body>
+</html>
