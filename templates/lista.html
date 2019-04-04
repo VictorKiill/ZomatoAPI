@@ -10,18 +10,24 @@
 </header>
 <body>
     {% for item in lista %}
-        <table>
+        <table  class="table table-bordered">
             <tr>
-                <th> Nome </th>
+                <th scope="row"> Nome </th>
                 <td> {{ item['restaurant']['name'] }} </td>
-                <th> Endereço </th>
+            </tr>
+            <tr>
+                <th scope="row"> Endereço </th>
                 <td> {{ item['restaurant']['location']['address'] }} </td>
-                <th> Tipo de Cozinhas </th>
+            </tr>
+            <tr>
+                <th scope="row"> Tipo de Cozinhas </th>
                 <td> {{ item['restaurant']['cuisines'] }} </td>
-                <th> Avaliação </th>
+            </tr>
+            <tr>
+                <th scope="row"> Avaliação </th>
                 <td> {{ item['restaurant']['user_rating']['rating_text'] }} </td>
             </tr>
-        </table>
+        </table><br/>
     {% endfor %}
 </body>
 </html>
